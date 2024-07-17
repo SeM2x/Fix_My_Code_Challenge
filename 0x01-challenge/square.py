@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module for square class"""
+""" Defines Square class"""
 
 
 class Square():
@@ -8,7 +8,7 @@ class Square():
     height = 0
 
     def __init__(self, *args, **kwargs):
-        """ Instantiation of class """
+        """ init function """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -17,16 +17,16 @@ class Square():
         return self.width * self.height
 
     def permiter_of_my_square(self):
-        """ Perimeter of my square """
+        """ Perimeter of the square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ Printable representation """
+        """ str function """
         return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
-    """ Create a square object """
+    """ Creates a Square"""
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
